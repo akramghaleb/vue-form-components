@@ -1,11 +1,17 @@
 <template>
   <form novalidate>
-    <slot
-        :group="group"
-        :fields="fields"
-        :validation="validationBag"
-    >
-    </slot>
+    <div class="container">
+      <div class="row text-center justify-content-center">
+        <div class="col-4">
+          <slot
+              :group="group"
+              :fields="fields"
+              :validation="validationBag"
+          >
+          </slot>
+        </div>
+      </div>
+    </div>
   </form>
 </template>
 

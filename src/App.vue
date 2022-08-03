@@ -1,8 +1,19 @@
 <template>
-<!--  <img alt="Vue logo" src="./assets/logo.png">-->
-  <HomePage  msg="Welcome to Your Vue.js App"/>
+  <img alt="Vue logo" src="./assets/logo.png">
   <FormWrapper group="update-form" v-slot="form_props">
-    {{form_props.group}}
+    <div class="card">
+      <div class="card-header">
+        <HomePage  msg="View Form Components" class="mb-3"/>
+      </div>
+      <div class="card-body">
+        <div class="mb-3 text-start">
+          <label for="full_Name" class="form-label">Full Name : {{ form_props.fields.full_name }}</label>
+          <input type="text" v-model="form_props.fields.full_name"
+                 class="form-control" id="full_Name" placeholder="Full Name">
+        </div>
+      </div>
+    </div>
+
   </FormWrapper>
 </template>
 
