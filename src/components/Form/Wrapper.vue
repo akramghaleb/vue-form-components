@@ -1,7 +1,7 @@
-<template>
+<template v-slot="form_props">
   <form novalidate>
     <slot
-        :type="type"
+        :group="group"
         :fields="fields"
         :validation="validationBag"
     >

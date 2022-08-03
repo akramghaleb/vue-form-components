@@ -1,7 +1,9 @@
 <template>
 <!--  <img alt="Vue logo" src="./assets/logo.png">-->
   <HomePage  msg="Welcome to Your Vue.js App"/>
-  <FormWrapper group="update-form" v-cloak/>
+  <FormWrapper group="update-form" v-slot="form_props">
+    {{form_props.group}}
+  </FormWrapper>
 </template>
 
 <script>
