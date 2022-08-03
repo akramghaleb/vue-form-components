@@ -1,15 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<!--  <img alt="Vue logo" src="./assets/logo.png">-->
+  <HomePage  msg="Welcome to Your Vue.js App"/>
+  <FormWrapper group="update-form" v-cloak/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HomePage from "@/components/Home";
+import FormWrapper from "@/components/Form/Wrapper";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    FormWrapper,
+    HomePage,
   }
 }
 </script>
