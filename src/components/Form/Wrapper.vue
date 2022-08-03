@@ -1,4 +1,4 @@
-<template v-slot="form_props">
+<template>
   <form novalidate>
     <slot
         :group="group"
