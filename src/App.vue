@@ -5,12 +5,18 @@
       <div class="card-header">
         <HomePage  msg="View Form Components" class="mb-3"/>
       </div>
+      
       <div class="card-body">
-        <div class="mb-3 text-start">
-          <label for="full_Name" class="form-label">Full Name : {{ form_props.fields.full_name }}</label>
-          <input type="text" v-model="form_props.fields.full_name"
-                 class="form-control" id="full_Name" placeholder="Full Name">
-        </div>
+        <text-input label="Full Name"
+          :group="form_props.group"
+          name="first_name"
+          v-model:value="form_props.fields.first_name"
+          current-value="Akram Ghaleb"
+          :focus="true"
+          placeholder="First Name"
+          maxlength="9"
+          autocomplete="given-name"
+          />
       </div>
     </div>
 
@@ -20,10 +26,12 @@
 <script>
 import HomePage from "@/components/Home";
 import FormWrapper from "@/components/Form/Wrapper";
+import TextInput from "@/components/Form/Input/Text";
 
 export default {
   name: 'App',
   components: {
+    TextInput,
     FormWrapper,
     HomePage,
   }
