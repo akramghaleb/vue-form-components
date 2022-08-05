@@ -5,7 +5,7 @@
       <div class="card-header">
         <HomePage  msg="View Form Components" class="mb-3"/>
       </div>
-      
+
       <div class="card-body">
         <text-input label="Full Name"
           :group="form_props.group"
@@ -14,7 +14,6 @@
           current-value="Akram Ghaleb"
           :focus="true"
           placeholder="First Name"
-          maxlength="9"
           autocomplete="given-name"
           />
       </div>
