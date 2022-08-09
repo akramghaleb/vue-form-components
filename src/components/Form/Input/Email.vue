@@ -1,22 +1,22 @@
 <template>
-    <div class="mb-3 text-start">
-      <label for="full_Name" class="form-label">
-        {{ label }} : {{ value }}</label>
-      <input type="text"
-             :id="identity"
-             :name="name"
-             :value="value"
-             :maxlength="maxlength"
-             :placeholder="placeholder"
-             :autocomplete="autocomplete"
-             @input="$emit('update:value', $event.target.value)"
-             class="form-control">
-    </div>
+  <div class="mb-3 text-start">
+    <label for="full_Name" class="form-label">
+      {{ label }} : {{ value }}</label>
+    <input type="email"
+           :id="identity"
+           :name="name"
+           :value="value"
+           :maxlength="maxlength"
+           :placeholder="placeholder"
+           :autocomplete="autocomplete"
+           @input="$emit('update:value', $event.target.value)"
+           class="form-control">
+  </div>
 </template>
 
 <script>
 export default {
-  name: "text-input",
+  name: "email-input",
   props:{
     group: {
       type: String,

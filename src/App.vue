@@ -7,7 +7,7 @@
       </div>
 
       <div class="card-body">
-        <text-input label="Full Name"
+        <TextInput label="Full Name"
           :group="form_props.group"
           name="first_name"
           v-model:value="form_props.fields.first_name"
@@ -16,6 +16,15 @@
           placeholder="First Name"
           autocomplete="given-name"
           />
+        <EmailInput label="Email"
+                   :group="form_props.group"
+                   name="email"
+                   v-model:value="form_props.fields.email"
+                   current-value=""
+                   :focus="false"
+                   placeholder="akramghammari@gmail.com"
+                   autocomplete="given-name"
+        />
       </div>
     </div>
 
@@ -26,6 +35,7 @@
 import HomePage from "@/components/Home";
 import FormWrapper from "@/components/Form/Wrapper";
 import TextInput from "@/components/Form/Input/Text";
+import EmailInput from "@/components/Form/Input/Email";
 
 export default {
   name: 'App',
@@ -33,6 +43,7 @@ export default {
     TextInput,
     FormWrapper,
     HomePage,
+    EmailInput
   }
 }
 </script>
