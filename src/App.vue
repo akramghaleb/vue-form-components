@@ -70,6 +70,15 @@
                        placeholder=""
                        autocomplete="given-name"
         />
+        <NumberInput label="Number"
+                   :group="form_props.group"
+                   name="number"
+                   v-model:value="form_props.fields.number"
+                   current-value=""
+                   :focus="false"
+                   placeholder=""
+                   autocomplete="given-name"
+        />
       </div>
     </div>
 
@@ -86,10 +95,12 @@ import TextareaInput from "@/components/Form/Input/Textarea";
 import DateInput from "@/components/Form/Input/Date";
 import DatetimeInput from "@/components/Form/Input/DateTime";
 import TimeInput from "@/components/Form/Input/Time";
+import NumberInput from "@/components/Form/Input/Number";
 
 export default {
   name: 'App',
   components: {
+    NumberInput,
     TimeInput,
     DatetimeInput,
     DateInput,
