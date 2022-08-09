@@ -25,6 +25,15 @@
                    placeholder="akramghammari@gmail.com"
                    autocomplete="given-name"
         />
+        <PasswordInput label="Password"
+                    :group="form_props.group"
+                    name="password"
+                    v-model:value="form_props.fields.password"
+                    current-value=""
+                    :focus="false"
+                    placeholder=""
+                    autocomplete="given-name"
+        />
       </div>
     </div>
 
@@ -36,10 +45,12 @@ import HomePage from "@/components/Home";
 import FormWrapper from "@/components/Form/Wrapper";
 import TextInput from "@/components/Form/Input/Text";
 import EmailInput from "@/components/Form/Input/Email";
+import PasswordInput from "@/components/Form/Input/Password";
 
 export default {
   name: 'App',
   components: {
+    PasswordInput,
     TextInput,
     FormWrapper,
     HomePage,
