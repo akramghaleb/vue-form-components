@@ -43,6 +43,15 @@
                        placeholder=""
                        autocomplete="given-name"
         />
+        <DateInput label="Date"
+                       :group="form_props.group"
+                       name="date"
+                       v-model:value="form_props.fields.date"
+                       current-value=""
+                       :focus="false"
+                       placeholder=""
+                       autocomplete="given-name"
+        />
       </div>
     </div>
 
@@ -56,10 +65,12 @@ import TextInput from "@/components/Form/Input/Text";
 import EmailInput from "@/components/Form/Input/Email";
 import PasswordInput from "@/components/Form/Input/Password";
 import TextareaInput from "@/components/Form/Input/Textarea";
+import DateInput from "@/components/Form/Input/Date";
 
 export default {
   name: 'App',
   components: {
+    DateInput,
     TextareaInput,
     PasswordInput,
     TextInput,
