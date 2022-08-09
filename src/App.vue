@@ -7,6 +7,15 @@
       </div>
 
       <div class="card-body">
+        <HiddenInput
+                   :group="form_props.group"
+                   name="hidden"
+                   v-model:value="form_props.fields.hidden"
+                   current-value="Akram Ghaleb"
+                   :focus="true"
+                   placeholder="First Name"
+                   autocomplete="given-name"
+        />
         <TextInput label="Full Name"
           :group="form_props.group"
           name="first_name"
@@ -96,10 +105,12 @@ import DateInput from "@/components/Form/Input/Date";
 import DatetimeInput from "@/components/Form/Input/DateTime";
 import TimeInput from "@/components/Form/Input/Time";
 import NumberInput from "@/components/Form/Input/Number";
+import HiddenInput from "@/components/Form/Input/Hidden";
 
 export default {
   name: 'App',
   components: {
+    HiddenInput,
     NumberInput,
     TimeInput,
     DatetimeInput,
