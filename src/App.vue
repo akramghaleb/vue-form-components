@@ -34,6 +34,15 @@
                     placeholder=""
                     autocomplete="given-name"
         />
+        <TextareaInput label="Textarea"
+                       :group="form_props.group"
+                       name="password"
+                       v-model:value="form_props.fields.textarea"
+                       current-value=""
+                       :focus="false"
+                       placeholder=""
+                       autocomplete="given-name"
+        />
       </div>
     </div>
 
@@ -46,10 +55,12 @@ import FormWrapper from "@/components/Form/Wrapper";
 import TextInput from "@/components/Form/Input/Text";
 import EmailInput from "@/components/Form/Input/Email";
 import PasswordInput from "@/components/Form/Input/Password";
+import TextareaInput from "@/components/Form/Input/Textarea";
 
 export default {
   name: 'App',
   components: {
+    TextareaInput,
     PasswordInput,
     TextInput,
     FormWrapper,
